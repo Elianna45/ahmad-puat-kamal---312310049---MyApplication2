@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1C1C1C"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar or AppBar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- LinearLayout to arrange ImageView and EditText horizontally -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Left ImageView -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/search" />
+
+            <!-- Search bar (EditText) takes remaining space -->
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Food Items Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/food_image1"
+                android:layout_width="366dp"
+                android:layout_height="305dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/elsia5"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <!-- Title, Description, Favorite and Download buttons next to the title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Title of the character -->
+            <TextView
+                android:id="@+id/image_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Elsiya 2"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:paddingEnd="8dp" />
+
+            <!-- Favorite Button (Icon) -->
+            <ImageView
+                android:id="@+id/favorite_button"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:textColor="#FFFFFF"
+                android:src="@drawable/favorit"
+                />
+
+            <!-- Download Button -->
+            <Button
+                android:id="@+id/download_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Description of the character -->
+        <TextView
+            android:id="@+id/image_description"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:text="Elsiya is a brave and wise character from the anime series. Known for her unique abilities and determination, she captivates fans with her courage and charming personality. yfhfcghchjcvghcghhhhhhhhhhhhhhhhhhcvgchgcvchfxcjhgjhkjhbjkbcjx bhxb xb dcdbkjdxb cdjhbx kjb hdbcsssssssssssssssssssssssssssssss                                          dcjhdc                                                                                                                                                                     "
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Bottom Toolbar -->
+
+</LinearLayout>

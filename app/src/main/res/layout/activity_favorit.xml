@@ -1,0 +1,354 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#070707"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar or AppBar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3D56E1"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- LinearLayout to arrange ImageView and EditText horizontally -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Left ImageView -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/search" />
+
+            <!-- Search bar (EditText) takes remaining space -->
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Food Items Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Food Item 1: Burger -->
+            <LinearLayout
+                android:id="@+id/gambar1"
+                android:layout_width="0dp"
+                android:layout_height="182dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/wibuu1"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:id="@+id/foodName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Burger"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Food Item 2: Rendang -->
+            <LinearLayout
+                android:id="@+id/gambar2"
+                android:layout_width="0dp"
+                android:layout_height="182dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/wibu3"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:id="@+id/foodName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rendang"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Food Item 3: Pizza -->
+            <LinearLayout
+                android:id="@+id/gambar3"
+                android:layout_width="0dp"
+                android:layout_height="182dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/wibuu223344"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:id="@+id/foodName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pizza"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Food Item 4: Sushi -->
+            <LinearLayout
+                android:id="@+id/gambar4"
+                android:layout_width="0dp"
+                android:layout_height="182dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/mika_blue_archive_drawn_by_o_rakkasei__689c0167da1efb33351b0d65e0155919"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:id="@+id/foodName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sushi"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Food Item 5: Pasta -->
+            <LinearLayout
+                android:id="@+id/gambar5"
+                android:layout_width="0dp"
+                android:layout_height="182dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/mika_blue_archive_drawn_by_o_rakkasei__689c0167da1efb33351b0d65e0155919"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:id="@+id/foodName5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pasta"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Food Item 6: Salad -->
+            <LinearLayout
+                android:id="@+id/gambar6"
+                android:layout_width="0dp"
+                android:layout_height="182dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/mika_blue_archive_drawn_by_o_rakkasei__689c0167da1efb33351b0d65e0155919"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_favorite" />
+
+                <TextView
+                    android:id="@+id/foodName6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salad"
+                    android:textSize="16sp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Bottom Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#545667"
+        android:elevation="4dp"
+        android:padding="6dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_gravity="bottom">
+
+        <!-- LinearLayout to arrange ImageViews -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <!-- Home Icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Search Icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Favorite Icon -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/favorit"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/favorit" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favorite"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>
